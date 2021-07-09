@@ -1,11 +1,13 @@
-import React from 'react';
-import Navigation from "./components/Navigation";
-import './App.css';
+import React from "react";
+import Navigation from "./components/Navigation/Navigation";
+import "./App.css";
 
 const App: React.FC<{}> = () => {
   return (
-    <div><Navigation /></div>
+    <div>
+      <Navigation />
+    </div>
   );
-}
+};
 
 export default App;
