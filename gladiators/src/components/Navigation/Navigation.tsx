@@ -9,8 +9,8 @@ const Navigation: React.FC<{}> = () => {
     <div>
       <Header>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/teams">Teams</NavLink>
-        <NavLink to="/ueber">Über Uns</NavLink>
+        <NavLink to="/member">Teams</NavLink>
+        <NavLink to="/about">Über Uns</NavLink>
       </Header>
 
       <BrowserRouter>
@@ -18,7 +18,7 @@ const Navigation: React.FC<{}> = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/ueber">
+          <Route exact path="/about">
             <UeberUns />
           </Route>
         </Switch>

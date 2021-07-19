@@ -5,17 +5,11 @@
     height: 50px;
 }
 
-.buttons {
+.button__wrapper {
     width: 100%;
-    background-color: #6E6E6E;
-    color: #FA5858;
-    font-weight: bold;
-    font-size: large;
-    border: none;
-    cursor: pointer;
 }
 
-.buttons:hover {
+.button__wrapper:hover {
     border-left: 1px solid #FA5858;
     border-right: 1px solid #FA5858;
 }
