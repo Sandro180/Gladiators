@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/Header/Header";
 
-const Home: React.FC<{}> = () => {
+const Member: React.FC<{}> = () => {
   return (
     <div>
       <Header />
-      <div>Home</div>
+      <div>Member</div>
     </div>
   );
 };
 
-export default Home;
+export default Member;

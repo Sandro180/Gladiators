@@ -1,28 +1,25 @@
 import React from "react";
-import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
-import Header from "../Header/Header";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../../views/Home";
-import UeberUns from "../../views/UeberUns";
+import AboutUs from "../../views/AboutUs";
+import Member from "../../views/Member";
 
 const Navigation: React.FC<{}> = () => {
   return (
     <div>
-      <Header>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/member">Teams</NavLink>
-        <NavLink to="/about">Über Uns</NavLink>
-      </Header>
-
-      <BrowserRouter>
+      <Router>
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/member">
+            <Member />
+          </Route>
           <Route exact path="/about">
-            <UeberUns />
+            <AboutUs />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };

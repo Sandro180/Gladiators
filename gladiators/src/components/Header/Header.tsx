@@ -4,17 +4,17 @@ import Button from "../Button/Button";
 import { useHistory } from "react-router-dom";
 
 const Header: React.FC<{}> = () => {
-  const [isActiveHome, setIsActiveHome] = useState<boolean>(true);
-  const [isActiveMember, setIsActiveMember] = useState<boolean>(false);
-  const [isActiveAbout, setIsActiveAbout] = useState<boolean>(false);
+  const [isActiveHome, setIsActiveHome] = useState<boolean>();
+  const [isActiveMember, setIsActiveMember] = useState<boolean>();
+  const [isActiveAbout, setIsActiveAbout] = useState<boolean>();
   const history = useHistory();
 
   function activeClick(button: string) {
-    setIsActiveHome(button === "Home" ? true : false);
-    setIsActiveMember(button === "Member" ? true : false);
-    setIsActiveAbout(button === "About" ? true : false);
+    setIsActiveHome(button.includes("Home"));
+    setIsActiveMember(button.includes("Member"));
+    setIsActiveAbout(button.includes("About"));
 
-    history.push(/*button === "Home" ? "/" : "/" + button.toLowerCase()*/ "/about");
+    history.push(button === "Home" ? "/" : "/" + button.toLowerCase());
   }
 
   return (
